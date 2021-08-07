@@ -40,6 +40,8 @@
          <label><input name="radio" type="radio" value="0" checked/>适配接口</label>
          <label><input name="radio" type="radio" value="1" />接口1 </label>
          <label><input name="radio" type="radio" value="2" />接口2 </label>
+         <label><input name="radio" type="radio" value="3" />接口3 </label>
+         
     </form>
 </div>
 
@@ -88,7 +90,7 @@ function get_aqiyi(url) {
             }else {
                 html = "";
                 for (i = 0; i < json.length; i++) {
-                    html += '<strong data-url=https:"' + json[i].pageUrl + '">' + json[i].subTitle + '</strong>';
+                    html += '<strong data-url=https:' + json[i].pageUrl + '>' + json[i].subTitle + '</strong>';
                 }
                 document.getElementsByClassName("right")[0].innerHTML = html;
                 init_click();
